@@ -1,6 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+app.use(cors({
+     origin: ['https://frontend-vajw.vercel.app'],
+     credentials: true
+   }));
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");
